@@ -17,7 +17,6 @@ main {
   border-radius: 5px;
   width: 400px;
   box-shadow: 2px 2px 10px #ccc;
-  
 }
 
 .title {
@@ -59,16 +58,16 @@ ul {
 }
 
 .container2 li {
-    display: flex;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    box-shadow: 2px 2px 10px #ccc;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 10px #ccc;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .div {
