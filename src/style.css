@@ -1,126 +1,215 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: rgb(246, 246, 246);
+  font-family: 'Lato', sans-serif;
 }
 
-main {
+/* todolist list base */
+#toDoList {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  margin: 300px auto auto auto;
+  background-color: white;
+  box-shadow: 0 4px 20px 30px rgba(0, 0, 0, 0.137);
 }
 
-.to-do-list {
-  background-color: #f7f7f7;
-  padding: 20px;
-  border-radius: 5px;
-  width: 400px;
-  box-shadow: 2px 2px 10px #ccc;
-  text-align: center;
+::placeholder {
+  font-family: 'inter', sans-serif;
+  font-style: italic;
+  font-size: 14px;
 }
 
+/* title base */
 .title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.refresh {
-  cursor: pointer;
-  float: right;
-  margin-top: -40px;
-}
-
-.line {
-  margin: 10px 0;
-  border: none;
-  border-top: 1px solid #ccc;
-}
-
-.input {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.add-btn {
-  position: relative;
-  cursor: pointer;
-  float: right;
-  margin-top: -40px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.container2 li {
+  background: #fff;
   display: flex;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  box-shadow: 2px 2px 10px #ccc;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding-right: 23px;
+  padding-left: 10px;
+  height: 50px;
 }
 
-.input-text {
+/* h1 text */
+.title1 {
+  font-family: 'inter', sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  font-style: normal;
+  padding-top: 8px;
+}
+
+/* icon */
+i {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+/* task list base */
+#inputList {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.inputTask {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  border-top: 1px solid gray;
+  height: 50px;
+  padding: 0 10px;
+}
+
+/* refresh icon */
+.inputTask i {
+  rotate: 90deg;
+  cursor: pointer;
+}
+
+/* input text  */
+#addList {
+  width: 100%;
+  height: 45px;
+  border: none;
+}
+
+.submiticon {
+  padding: 2px;
+}
+
+.remove-edit {
+  display: flex;
+  justify-items: flex-end;
+  margin-left: auto;
+  padding-right: 23px;
   text-decoration: none;
 }
 
-.list-line {
-  border: 0;
-  width: 100%;
-  background-color: gray;
-  height: 1px;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.task {
-  display: flex;
-  width: 99%;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1%;
-}
-
-.task-text {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.task-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.div {
-  rotate: 90deg;
-}
-
-.complete-btn {
-  background-color: #0093ff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 10px;
+/* Clear task button */
+#btnClear {
+  height: 50px;
+  color: rgb(147, 147, 147);
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  border-top: 1px solid gray;
+  font-size: 18px;
+  font-family: 'inter', sans-serif;
   cursor: pointer;
-  width: 100%;
-  border: none;
 }
 
-.complete-btn:hover {
-  background-color: #007bff;
+/* task list base */
+.list {
+  background: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid gray;
+  padding-left: 10px;
+  list-style: none;
+}
+
+/* text */
+.tasks label {
+  font-family: 'inter', sans-serif;
+  padding-left: 10px;
+  width: 100%;
+}
+
+/* text */
+.lists li:nth-child(3) {
+  display: flex;
+  justify-items: flex-end;
+  margin-left: auto;
+  padding-right: 15px;
+  text-decoration: none;
+}
+
+/* text checkbox */
+input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+}
+
+/* text */
+input {
+  font-family: 'inter', sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+/* text */
+input:focus {
+  outline: none;
+}
+
+/* text */
+.text {
+  height: 45px;
+  width: 95%;
+  padding-left: 5px;
+  border: none;
+  font-family: 'inter', sans-serif;
+  font-size: 15px;
+}
+
+.textcompleted {
+  text-decoration: line-through;
+  border: none;
+  font-size: 17px;
+  height: 45px;
+  width: 95%;
+  padding-left: 5px;
+  color: #9b9b9b;
+}
+
+/* edit button */
+.edit_list_btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* remove button */
+.remove_btn {
+  cursor: pointer;
+  display: none;
+  border: none;
+  background: none;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.to-do {
+  background: #fff;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 10px;
+  list-style: none;
+  border-bottom: 0.01px solid #d3d3d3;
 }
