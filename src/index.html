@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/be8db3d534.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
-</head>
-
-
-<body>
-<!-- To do list starts here -->
-
-    <div id="toDoList">
+  </head>
+  <body>
+    <main class="main">
+      <section class="toDo_list">
         <div class="title">
-            <h1 class="title1">Today's To Do List</h1>
-            <i class="fa fa-arrows-rotate icon"></i>
+          <h1 class="toDo_title">Today's To Do</h1>
         </div>
-        <form id="inputList" action="#" method="post">
-        <div class="inputTask">
-        <input id="addList" type="text" placeholder="Add to your to do list..." maxlength="80" required>
-        <button class="submiticon" type="submit"> <i class="fa fa-arrow-turn-down icon"></i> </button>
+        <div class="container">
+          <input
+            type="text"
+            name="task"
+            id="task"
+            class="inputField"
+            placeholder="Add new task"
+          />
+          <button class="insert-btn">ADD ME 🥺</button>
         </div>
-        </form>
-        <div class="toDoListContainer"></div>
-<!-- button clear starts here -->
-        <button id="btnClear" type="submit">Clear Completed Tasks</button>
-    </div>
-
-<!-- To do list ends here -->
-</body>
+        <ul class="toDoContainer"></ul>
+        <button class="clearbtn">Clear all completed</button>
+      </section>
+    </main>
+  </body>
 </html>
